@@ -1,0 +1,15 @@
+name: hello-kernel
+version: 0
+summary: Say hello to your favorite kernel!
+description: This module prints a message to the kernel buffer from the kernel.
+
+apps:
+    hello-kernel:
+        command: insert
+        daemon: simple
+        plugs: [ kernel-module ]
+
+parts:
+    hello-kernel:
+        plugin: make
+        source: .
